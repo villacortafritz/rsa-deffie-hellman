@@ -1,1 +1,1 @@
-# rsa-diffie-hellman
+# 6-type-cipher-methods

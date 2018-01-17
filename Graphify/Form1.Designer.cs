@@ -101,16 +101,16 @@
             // 
             // ceasar1
             // 
-            this.ceasar1.Location = new System.Drawing.Point(0, 0);
+            this.ceasar1.Location = new System.Drawing.Point(0, 1);
             this.ceasar1.Name = "ceasar1";
-            this.ceasar1.Size = new System.Drawing.Size(750, 550);
+            this.ceasar1.Size = new System.Drawing.Size(950, 490);
             this.ceasar1.TabIndex = 1;
             // 
             // playfair1
             // 
             this.playfair1.Location = new System.Drawing.Point(0, 0);
             this.playfair1.Name = "playfair1";
-            this.playfair1.Size = new System.Drawing.Size(750, 550);
+            this.playfair1.Size = new System.Drawing.Size(950, 490);
             this.playfair1.TabIndex = 0;
             // 
             // Form1

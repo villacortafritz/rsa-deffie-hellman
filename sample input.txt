@@ -1,0 +1,24 @@
+generator = 3
+public key = 17
+
+bob = 15
+firstsend = 6
+
+alice = 13
+secondsend = 12
+
+result = 10
+
+
+p1 = 53
+p2 = 59
+n = 3127
+phi n = 3016
+e = 3
+
+message = 89
+encrypted = 1394
+
+k = 2
+d = 2011
+result = 89
