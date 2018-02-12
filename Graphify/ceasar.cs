@@ -10,6 +10,8 @@ namespace Graphify
             InitializeComponent();
         }
 
+        public int final_key = 3;
+
         private void btnOff_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -17,7 +19,15 @@ namespace Graphify
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            
+            txtBobPrivate.Text = "";
+            txtAliceKey.Text = "";
+            txtAlicePrivate.Text = "";
+            txtAliceText.Text = "";
+            txtBobKey.Text = "";
+            txtBobText.Text = "";
+            txtGenerator.Text = "";
+            txtPublic.Text = "";
+
         }
 
         private void btnProceed_Click(object sender, EventArgs e)
@@ -42,21 +52,78 @@ namespace Graphify
             double aliceCalculate = (Math.Pow(fromBob, alicePrivate) % publicKey);
             txtBobText.Text = bobCalculate.ToString();
             txtAliceText.Text = aliceCalculate.ToString();
+
+            //final_key = (Convert.ToInt32(fromBob)%3);
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        public bool primeCheck(int num)
         {
+            bool flag = true;
 
+            for(int i=2; i<num/2; i++)
+            {
+                if(num%i != 0)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
         }
 
-        private void txtAliceKey_TextChanged(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
+            int key = Convert.ToInt32(txtBobText.Text);
+            String message = replyBob.Text;
+            String encrypted;
+            int length = message.Length;
+            char[] encrypted_message = new char[length];
+            char c;
+            Boolean flag = true;
 
-        }
+            for (int i = 0; i < length; i++)
+            {
+                c = message[i];
 
-        private void ceasar_Load(object sender, EventArgs e)
-        {
+                if (c >= 'a' && c <= 'z')
+                {
+                    c = (char)(c + key);
+                    if (c > 'z')
+                    {
+                        c = (char)(c - 'z' + 'a' - 1);
+                    }
 
+                    encrypted_message[i] = c;
+                }
+                else if (c >= 'A' && c <= 'Z')
+                {
+                    c = (char)(c + key);
+                    if (c > 'Z')
+                    {
+                        c = (char)(c - 'Z' + 'A' - 1);
+                    }
+
+                    encrypted_message[i] = c;
+                }
+                else if (c == ' ')
+                {
+                    c = (char)(c + key);
+                    encrypted_message[i] = c;
+                }
+                else
+                {
+                    MessageBox.Show("No numbers or symbols allowed!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //txtEncrypt.Text = "";
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag == true)
+            {
+                encrypted = new String(encrypted_message);
+                replyAlice.Text = encrypted;
+            }
         }
     }
 }

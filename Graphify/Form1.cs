@@ -45,5 +45,10 @@ namespace Graphify
         {
 
         }
+
+        private void ceasar1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -64,7 +64,7 @@
             // 
             this.btnPlayfair.FlatAppearance.BorderSize = 0;
             this.btnPlayfair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayfair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlayfair.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayfair.ForeColor = System.Drawing.Color.White;
             this.btnPlayfair.Location = new System.Drawing.Point(476, 5);
             this.btnPlayfair.Name = "btnPlayfair";
@@ -78,7 +78,7 @@
             // 
             this.btnCeasar.FlatAppearance.BorderSize = 0;
             this.btnCeasar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCeasar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCeasar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCeasar.ForeColor = System.Drawing.Color.White;
             this.btnCeasar.Location = new System.Drawing.Point(0, 5);
             this.btnCeasar.Name = "btnCeasar";
@@ -105,6 +105,7 @@
             this.ceasar1.Name = "ceasar1";
             this.ceasar1.Size = new System.Drawing.Size(950, 490);
             this.ceasar1.TabIndex = 1;
+            this.ceasar1.Load += new System.EventHandler(this.ceasar1_Load);
             // 
             // playfair1
             // 

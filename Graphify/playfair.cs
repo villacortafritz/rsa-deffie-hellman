@@ -22,6 +22,14 @@ namespace Graphify
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtD.Text = "";
+            txtE.Text = "";
+            txtEncrypted.Text = "";
+            txtMessage.Text = "";
+            txtN.Text = "";
+            txtP1.Text = "";
+            txtP2.Text = "";
+            txtResult.Text = "";
         }
 
         private void btnOff_Click(object sender, EventArgs e)
@@ -44,26 +52,13 @@ namespace Graphify
             double encrypted = (Math.Pow(message, key) % n);
             txtEncrypted.Text = encrypted.ToString();
 
-            int k = 0;
+            int k = 1;
             double d=0;
-
-            for (int i = 1; i > 0; i++)
-            {
-                k = 2;
-                d = (k * phi_n + 1) / key;
-                if ((d % 1) == 0)
-                {
-                    break;
-                }
-            }
-
-            txtK.Text = k.ToString();
                 
             txtD.Text = d.ToString();
 
             double decrypted = (Math.Pow(encrypted, d) % n);
             txtResult.Text = decrypted.ToString();
         }
-        
     }
 }
