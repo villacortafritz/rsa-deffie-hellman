@@ -149,7 +149,7 @@
             this.txtE.Name = "txtE";
             this.txtE.Size = new System.Drawing.Size(150, 30);
             this.txtE.TabIndex = 20;
-            this.txtE.Text = "17";
+            this.txtE.Text = "3";
             // 
             // txtN
             // 
@@ -157,7 +157,7 @@
             this.txtN.Name = "txtN";
             this.txtN.Size = new System.Drawing.Size(150, 30);
             this.txtN.TabIndex = 21;
-            this.txtN.Text = "3";
+            this.txtN.Text = "";
             // 
             // btnProceed
             // 
@@ -210,7 +210,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(150, 30);
             this.txtMessage.TabIndex = 18;
-            this.txtMessage.Text = "15";
+            this.txtMessage.Text = "89";
             // 
             // label14
             // 
@@ -264,7 +264,7 @@
             this.txtP1.Name = "txtP1";
             this.txtP1.Size = new System.Drawing.Size(150, 30);
             this.txtP1.TabIndex = 18;
-            this.txtP1.Text = "13";
+            this.txtP1.Text = "53";
             // 
             // label18
             // 
@@ -282,7 +282,7 @@
             this.txtP2.Name = "txtP2";
             this.txtP2.Size = new System.Drawing.Size(150, 30);
             this.txtP2.TabIndex = 22;
-            this.txtP2.Text = "15";
+            this.txtP2.Text = "59";
             // 
             // label19
             // 

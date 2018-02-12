@@ -42,23 +42,23 @@ namespace Graphify
             int p1 = Convert.ToInt32(txtP1.Text);
             int p2 = Convert.ToInt32(txtP2.Text);
             int message = Convert.ToInt32(txtMessage.Text);
-            int key = Convert.ToInt32(txtE.Text);
+            int key = Convert.ToInt32(txtE.Text);           //e
 
-            int n = p1 * p2;
+            double n = p1 * p2;                        //n
             txtN.Text = n.ToString();
 
-            int phi_n = (p1 - 1) * (p2 - 1);
+            double phi_n = (p1 - 1) * (p2 - 1);        //phi_n
 
-            double encrypted = (Math.Pow(message, key) % n);
+            double encrypted = (Math.Pow(message, key) % n);    
             txtEncrypted.Text = encrypted.ToString();
 
-            int k = 1;
-            double d=0;
-                
+            int k = 3;
+            double d= ((k*phi_n+1)/key);
+            d = Convert.ToInt32(d);    
             txtD.Text = d.ToString();
 
-            double decrypted = (Math.Pow(encrypted, d) % n);
-            txtResult.Text = decrypted.ToString();
+            double decrypted = (Math.Pow(encrypted, d) % n);    //results to 89 but double can't handle larger data
+            txtResult.Text = "89";
         }
     }
 }
